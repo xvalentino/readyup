@@ -4,12 +4,14 @@
   "main": "index.js",
   "author": "Valentino Espinoza <xvalentino13@gmail.com>",
   "scripts": {
+    "start": "node index.js",
     "monitor": "prisma2 studio --experimental"
   },
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^2.0.0-preview022",
     "express": "^4.17.1",
+    "node": "^13.8.0",
     "prisma2": "^2.0.0-preview022"
   }
 }
