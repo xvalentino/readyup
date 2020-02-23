@@ -1,16 +1,29 @@
-// import { PrismaClient } from "@prisma/client";
+const express = require("express");
+const PrismaClient = require("@prisma/client").PrismaClient;
+const path = require("path");
 
-// const prisma = new PrismaClient();
+const app = express();
+const port = 3000;
+const prisma = new PrismaClient();
 
 //   const user1 = await prisma.reminder.create({
 //     data: {
 //       name: "test"
 //     }
 //   });
-const express = require("express");
-const app = express();
-const port = 3000;
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "/index.html"));
+});
+
+app.get("/reminder/:reminderName", (req, res) => {
+  prisma.connect();
+  const name = req.params.reminder_name;
+  let reminder = prisma.reminder.findOne({ where: { name } });
+  if (!reminder) {
+    reminder = prisma.reminder.create({ data: { name } });
+  }
+  res.json(reminder);
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
