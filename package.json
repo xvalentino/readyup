@@ -4,7 +4,8 @@
   "main": "index.js",
   "author": "Valentino Espinoza <xvalentino13@gmail.com>",
   "scripts": {
-    "start": "node index.js",
+    "start:server": "node index.js",
+    "start:client": "parcel index.html --port 4444",
     "monitor": "prisma2 studio --experimental"
   },
   "license": "MIT",
@@ -12,6 +13,9 @@
     "@prisma/client": "^2.0.0-preview022",
     "express": "^4.17.1",
     "node": "^13.8.0",
-    "prisma2": "^2.0.0-preview022"
+    "parcel": "^1.12.4",
+    "prisma2": "^2.0.0-preview022",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }

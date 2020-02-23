@@ -12,10 +12,6 @@ const prisma = new PrismaClient();
 //     }
 //   });
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
-});
-
 app.get("/reminder/:reminderName", (req, res) => {
   prisma.connect();
   const name = req.params.reminder_name;
