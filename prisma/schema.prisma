@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://valentinoespinoza:valentinoespinoza@localhost:5432/hello-prisma"
+}
+
+model Reminder {
+  createdAt   DateTime
+  name        String?
+  reminder_id Int      @default(autoincrement()) @id
+}

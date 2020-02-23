@@ -1,0 +1,13 @@
+{
+  "name": "readyup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Valentino Espinoza <xvalentino13@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^2.0.0-preview022",
+    "prisma2": "^2.0.0-preview022",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
+}
