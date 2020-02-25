@@ -9,13 +9,21 @@
     "monitor": "prisma2 studio --experimental"
   },
   "license": "MIT",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
   "dependencies": {
     "@prisma/client": "^2.0.0-preview022",
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "moment": "^2.24.0",
     "node": "^13.8.0",
     "parcel": "^1.12.4",
     "prisma2": "^2.0.0-preview022",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
   }
 }

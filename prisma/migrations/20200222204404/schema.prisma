@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://valentinoespinoza:valentinoespinoza@localhost:5432/hello-prisma"
+  url = "***"
 }
 
 model Reminder {
